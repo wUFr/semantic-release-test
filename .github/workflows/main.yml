@@ -4,22 +4,26 @@ on:
       - 'release'
       - 'release-candidate'
 
-steps:
-  - name: Checkout
-    uses: actions/checkout@v3
-  - name: Semantic Release
-    uses: cycjimmy/semantic-release-action@v3
-    with:
-      semantic_version: 16
-      # you can set branches for semantic-release above v16.
-      branches: |
-        [
-          'release',
-          {
-            name: 'release-candidate',
-            prerelease: true
-          }
-        ]
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v3
+        with:
+          semantic_version: 16
+          # you can set branches for semantic-release above v16.
+          branches: |
+            [
+              'release',
+              {
+                name: 'release-candidate',
+                prerelease: true
+              }
+            ]
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
