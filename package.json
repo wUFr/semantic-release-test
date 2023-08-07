@@ -1,0 +1,27 @@
+{
+  "name": "autorelease-test",
+  "release": {
+    "branches": [
+      "release"
+    ]
+  },
+  "description": "test",
+  "version": "0.0.1",
+  "main": "readme.MD",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/wUFr/semantic-release-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wUFr/semantic-release-test/issues"
+  },
+  "homepage": "https://github.com/wUFr/semantic-release-test#readme",
+  "devDependencies": {
+    "semantic-release": "^21.0.7"
+  }
+}
