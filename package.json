@@ -1,5 +1,5 @@
 {
-  "name": "autorelease-test",
+  "name": "@wUFr/autorelease-test",
   "release": {
     "branches": [
       "release"
